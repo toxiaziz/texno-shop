@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yangi va eski texnikalar do'koni</title>
+  <meta name="description" content="Toshkentdagi yangi va eski texnikalar do'koni: telefon, noutbuk, ehtiyot qism, planshet, televizor va boshqa texnikalar.">
+  <meta name="theme-color" content="#f4f0e6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1915'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='28' fill='%23e7b07a'%3EYe%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,650&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#katalog">Katalogga o'tish</a>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Yangi texnikaga 12 oy kafolat</span>
+      <span>Eski modellarni ustaxonada tekshiramiz</span>
+      <span>Ehtiyot qismlar omborda</span>
+      <span>Toshkent bo'ylab yetkazib berish</span>
+      <span>Naqd, Uzcard, Humo va Click</span>
+      <span>Yangi texnikaga 12 oy kafolat</span>
+      <span>Eski modellarni ustaxonada tekshiramiz</span>
+      <span>Ehtiyot qismlar omborda</span>
+      <span>Toshkent bo'ylab yetkazib berish</span>
+      <span>Naqd, Uzcard, Humo va Click</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top">
+        <span class="logo-mark">Ye</span>
+        <span class="logo-text">
+          <strong>Yangi va eski</strong>
+          <em>texnikalar do'koni</em>
+        </span>
+      </a>
+      <form class="search" id="searchForm" role="search">
+        <label class="sr" for="search">Qidiruv</label>
+        <input id="search" type="search" placeholder="Telefon, noutbuk, ehtiyot qism..." autocomplete="off">
+      </form>
+      <button class="cart-btn" type="button" data-action="open-cart">
+        Savat
+        <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Toshkent · ustaxona va vitrina</p>
+          <h1>Yangi va eski texnikalar do'koni</h1>
+          <p class="lede">Telefon, noutbuk, ehtiyot qism, planshet, televizor va uy texnikasi. Yangi mahsulotlar qadoqda va kafolat bilan, eski modellari esa do'konda tekshirib sotiladi.</p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="#katalog">Katalogni ochish</a>
+            <button class="btn btn-line" type="button" data-action="condition" data-condition="eski" data-reset-cat="1" data-scroll="katalog">Eski texnikalar</button>
+          </div>
+          <ul class="stats">
+            <li><strong id="statProducts">0</strong><span>xil texnika</span></li>
+            <li><strong id="statCats">0</strong><span>toifa</span></li>
+            <li><strong>30 kun</strong><span>eski tovar kafolati</span></li>
+          </ul>
+        </div>
+        <div class="showcase" id="showcase" aria-label="Tanlangan mahsulotlar"></div>
+      </div>
+    </section>
+
+    <section class="section" id="turlar">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Toifalar</p>
+          <h2>Nimalar bor</h2>
+        </div>
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <section class="section catalog" id="katalog">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Katalog</p>
+          <h2>Barcha texnikalar</h2>
+        </div>
+
+        <div class="toolbar">
+          <div class="chips" id="chips" role="tablist" aria-label="Toifalar"></div>
+          <div class="toolbar-row">
+            <div class="seg" role="group" aria-label="Holati">
+              <button type="button" data-action="condition" data-condition="barchasi" class="is-active" aria-pressed="true">Barchasi</button>
+              <button type="button" data-action="condition" data-condition="yangi" aria-pressed="false">Yangi</button>
+              <button type="button" data-action="condition" data-condition="eski" aria-pressed="false">Eski</button>
+            </div>
+            <label class="sort">
+              <span class="sr">Saralash</span>
+              <select id="sort">
+                <option value="default">Tavsiya etilgan</option>
+                <option value="cheap">Avval arzon</option>
+                <option value="expensive">Avval qimmat</option>
+                <option value="yangi">Avval yangi</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="result-meta" id="resultMeta" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="section trust">
+      <div class="wrap trust-grid">
+        <article>
+          <p class="num">01</p>
+          <h3>Yangi va eski bir joyda</h3>
+          <p>Qadoqdagi yangi modelni ham, tekshirilgan eski telefon yoki noutbukni ham shu yerdan olasiz.</p>
+        </article>
+        <article>
+          <p class="num">02</p>
+          <h3>Eski texnika tekshiriladi</h3>
+          <p>Ishlatilgan jihozlar yoqiladi, batareya va asosiy qismlar ko'rib chiqiladi. 30 kunlik kafolat beriladi.</p>
+        </article>
+        <article>
+          <p class="num">03</p>
+          <h3>Ehtiyot qismlar ham bor</h3>
+          <p>Ekran, batareya, xotira, zaryadlagich va klaviatura — alohida ham sotiladi, ta'mirlashda ham ishlatiladi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section visit" id="aloqa">
+      <div class="wrap visit-grid">
+        <div>
+          <p class="kicker">Do'kon</p>
+          <h2>Kelib ko'ring yoki buyurtma qoldiring</h2>
+          <p class="lede">Vitrinadagi texnikani qo'lda ko'rish mumkin. Eski modellarni ustaxonada sinab beramiz.</p>
+        </div>
+        <address class="address">
+          <p><span>Manzil</span>Toshkent shahri, Chilonzor tumani, Bunyodkor ko'chasi 12</p>
+          <p><span>Telefon</span><a href="tel:+998712004567">+998 71 200 45 67</a></p>
+          <p><span>Ish vaqti</span>Har kuni 09:00–20:00</p>
+          <p><span>To'lov</span>Naqd, Uzcard, Humo, Click</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <p>Yangi va eski texnikalar do'koni</p>
+      <p>© <span id="year">2026</span> · Toshkent</p>
+    </div>
+  </footer>
+
+  <div id="overlay" class="overlay" hidden data-action="close"></div>
+
+  <aside id="drawer" class="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <h2 id="drawerTitle">Savat</h2>
+      <button type="button" class="icon-x" data-action="close" aria-label="Yopish">×</button>
+    </div>
+    <div id="viewCart" class="view">
+      <div id="cartItems"></div>
+    </div>
+    <div class="drawer-foot" id="cartFoot">
+      <div class="total-line"><span>Jami</span><strong id="cartTotal">0 so'm</strong></div>
+      <button type="button" id="toCheckout" data-action="checkout">Buyurtma berish</button>
+    </div>
+    <form id="viewCheckout" class="view checkout" hidden novalidate>
+      <button type="button" class="text-btn" data-action="back-cart">← Savatga qaytish</button>
+      <label>Ism
+        <input name="name" autocomplete="name" placeholder="Ismingiz">
+        <small class="err" data-err="name"></small>
+      </label>
+      <label>Telefon
+        <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998 90 123 45 67">
+        <small class="err" data-err="phone"></small>
+      </label>
+      <fieldset>
+        <legend>Olish usuli</legend>
+        <label class="radio"><input type="radio" name="delivery" value="olibketish" checked> Do'kondan olib ketish</label>
+        <label class="radio"><input type="radio" name="delivery" value="yetkazish"> Toshkent bo'ylab yetkazish</label>
+      </fieldset>
+      <label>Manzil <em id="addrHint">ixtiyoriy</em>
+        <input name="address" autocomplete="street-address" placeholder="Tuman, ko'cha, uy">
+        <small class="err" data-err="address"></small>
+      </label>
+      <label>Izoh
+        <textarea name="note" rows="3" placeholder="Qulay vaqt yoki model haqida"></textarea>
+      </label>
+      <button type="submit" class="btn btn-ink btn-block">Buyurtmani tasdiqlash</button>
+    </form>
+    <div id="viewSuccess" class="view" hidden></div>
+  </aside>
+
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="icon-x modal-x" data-action="close" aria-label="Yopish">×</button>
+    <div id="modalBody"></div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Katalogni ko'rish uchun JavaScript yoqing.</p></noscript>
+  <script src="js/app.js"></script>
+</body>
+</html>
